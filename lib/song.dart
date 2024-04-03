@@ -15,6 +15,11 @@ final List<Song> allSongs = [
   Song(14, 'Song Title 6', 'Genre 2', 1.99, 3),
   Song(15, 'Song Title 6', 'Genre 2', 1.99, 3),
   Song(16, 'Song Title 6', 'Genre 2', 1.99, 3),
+  Song(17, 'Song Title 1', 'Genre 1', 2.99, 1),
+  Song(18, 'Song Title 1', 'Genre 1', 2.99, 1),
+  Song(19, 'Song Title 1', 'Genre 1', 2.99, 1),
+  Song(20, 'Song Title 1', 'Genre 1', 2.99, 1),
+
   // ... add more songs
 ];
 final Map<int?, Song?> songMap = {for (var song in allSongs) song.id: song};
