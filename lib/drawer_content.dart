@@ -54,7 +54,7 @@ class MyDrawerContent extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Author Search'),
+            title: const Text('Author Searchs'),
             onTap: () {
               // Update the state of the app.
               Navigator.pop(context);
