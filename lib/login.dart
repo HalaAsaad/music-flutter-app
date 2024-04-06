@@ -94,6 +94,7 @@ class _LoginPageState extends State<LoginPage> {
               //login button
               ElevatedButton(
                 onPressed: () async {
+                  Navigator.of(context).pushNamed("home");
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                   }
@@ -113,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
 
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed("home");
+                  Navigator.of(context).pushNamed("signup");
                 },
                 child: const Text("Register"),
               ),

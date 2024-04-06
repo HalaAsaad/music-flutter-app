@@ -49,7 +49,60 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               const SizedBox(height: 20.0), // Add spacing
+              // FName field
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Firstname',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter a Firstname';
+                  }
+                  return null; // Return null for valid input
+                },
+                // onSaved: (newValue) => _username = newValue!,
+              ),
 
+              const SizedBox(height: 20.0), // Add spacing
+              // LName field
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Lastname',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter a Lastname';
+                  }
+                  return null; // Return null for valid input
+                },
+                // onSaved: (newValue) => _username = newValue!,
+              ),
+
+              const SizedBox(height: 20.0), // Add spacing
+              // Address field
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Address',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter a Address';
+                  }
+                  return null; // Return null for valid input
+                },
+                // onSaved: (newValue) => _username = newValue!,
+              ),
+
+              const SizedBox(height: 20.0), // Add spacing
               // Email field
               TextFormField(
                 decoration: InputDecoration(
@@ -104,6 +157,7 @@ class _RegisterPageState extends State<RegisterPage> {
               // Register button
               ElevatedButton(
                 onPressed: () async {
+                  Navigator.of(context).pushNamed("login");
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     // Implement register logic here (e.g., call an API)
