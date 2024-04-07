@@ -1,12 +1,11 @@
 // import 'package:flutter/material.dart';
 import 'package:musicapp/drawer_content.dart';
-
 import 'package:flutter/material.dart';
-import 'package:musicapp/create_song.dart';
-import 'package:musicapp/homepage.dart';
+// import 'package:musicapp/create_song.dart';
+// import 'package:musicapp/homepage.dart';
 import 'package:musicapp/login.dart';
-import 'package:musicapp/pagesong.dart';
-import 'package:musicapp/search_artist_page.dart';
+// import 'package:musicapp/pagesong.dart';
+// import 'package:musicapp/search_artist_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

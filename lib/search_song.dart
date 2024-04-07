@@ -1,21 +1,27 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'song.dart';
 import 'package:musicapp/song_details_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: SongSearchPage(),
     );
   }
 }
 
 class SongSearchPage extends StatefulWidget {
+  const SongSearchPage({super.key});
+
   @override
   _SongSearchPageState createState() => _SongSearchPageState();
 }
@@ -46,7 +52,7 @@ class _SongSearchPageState extends State<SongSearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Song Search'),
+          title: const Text('Song Search'),
         ),
         body: Container(
           margin: const EdgeInsets.only(top: 10.0, left: 20, right: 20),
@@ -57,7 +63,7 @@ class _SongSearchPageState extends State<SongSearchPage> {
                   searchText = value;
                   searchSongs(searchText);
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Search for a song',
                 ),
               ),
