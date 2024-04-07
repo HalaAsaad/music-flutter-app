@@ -27,13 +27,7 @@ class SongSearchPage extends StatefulWidget {
 }
 
 class _SongSearchPageState extends State<SongSearchPage> {
-  // List<String> songs = [
-  //   'Song 1',
-  //   'Song 2',
-  //   'Song 3',
-  //   'Song 4',
-  //   'Song 5',
-  // ];
+
 
   String searchText = '';
 

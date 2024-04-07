@@ -10,7 +10,8 @@ class CreateArtistPage extends StatefulWidget {
 }
 
 class _CreateArtistPageState extends State<CreateArtistPage> {
-  int _selectedArtistIndex = 0; // Index of the selected artist in the dropdown
+  // // ignore: unused_field
+  // final int _selectedArtistIndex = 0; // Index of the selected artist in the dropdown
   // final List<String> artistNames = [
   //   'Artist 1',
   //   'Artist 2',

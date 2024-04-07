@@ -1,6 +1,6 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:musicapp/allArtists.dart';
+import 'package:musicapp/all_artists.dart';
 import 'package:musicapp/create_artist.dart';
 import 'package:musicapp/homepage.dart';
 import 'package:musicapp/login.dart';
