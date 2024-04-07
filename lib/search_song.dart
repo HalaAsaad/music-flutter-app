@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:musicapp/artist_details.dart';
-
-import 'artists.dart';
 import 'song.dart';
 import 'package:musicapp/song_details_page.dart';
 
@@ -25,17 +21,17 @@ class SongSearchPage extends StatefulWidget {
 }
 
 class _SongSearchPageState extends State<SongSearchPage> {
-  List<String> songs = [
-    'Song 1',
-    'Song 2',
-    'Song 3',
-    'Song 4',
-    'Song 5',
-  ];
+  // List<String> songs = [
+  //   'Song 1',
+  //   'Song 2',
+  //   'Song 3',
+  //   'Song 4',
+  //   'Song 5',
+  // ];
 
   String searchText = '';
 
-  List<dynamic> searchResults = [];
+  List<dynamic> searchResults = allSongs;
 
   void searchSongs(String query) {
     setState(() {

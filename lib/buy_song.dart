@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'song.dart';
 
 class BuySongPage extends StatefulWidget {
   const BuySongPage({super.key});
@@ -17,16 +18,13 @@ class _BuySongPageState extends State<BuySongPage> {
   // ]; // Fake artists
 
   // final Artist artist;
-  List<String> SongsNames = []; // List to store artist names
+  List<dynamic> SongsNames = []; // List to store artist names
 
   @override
   void initState() {
     super.initState();
     // Fetch artist data on initialization (assuming a function in artists.dart)
-    SongsNames = [
-      "Song1",
-      "Song2"
-    ]; // Replace with actual function from artists.dart
+    SongsNames = allSongs; // Replace with actual function from artists.dart
   }
   // String get fullName => '$firstName $lastName';
 
@@ -47,14 +45,17 @@ class _BuySongPageState extends State<BuySongPage> {
           child: Column(
             children: [
               DropdownButtonFormField(
-                value: SongsNames[_selectedArtistIndex],
+                value: SongsNames[_selectedArtistIndex].id,
                 items: SongsNames.map((artist) => DropdownMenuItem(
-                      value: artist,
-                      child: Text(artist), // Use artist.fullName for display
+                      value: artist.id,
+                      child:
+                          Text(artist.title), // Use artist.fullName for display
                     )).toList(),
                 onChanged: (value) {
                   setState(() {
-                    _selectedArtistIndex = SongsNames.indexOf(value as String);
+                    // _selectedArtistIndex = SongsNames.indexOf(value as String);
+                    _selectedArtistIndex =
+                        SongsNames.indexWhere((element) => element.id == value);
                     // Access the selected artist using artistNames[_selectedArtistIndex]
                     // if needed
                   });

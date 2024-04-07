@@ -63,7 +63,7 @@ class _PageState extends State<Home> {
                       Navigator.of(context).pushNamed("artist-search");
                     }),
                 ListTile(
-                    title: const Text('Buy song(s)'),
+                    title: const Text('Buy song'),
                     onTap: () {
                       Navigator.of(context).pushNamed("buy-song");
                     }),
