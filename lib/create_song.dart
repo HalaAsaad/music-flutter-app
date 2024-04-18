@@ -78,7 +78,6 @@ class _CreateSongPageState extends State<CreateSongPage> {
             children: [
               TextFormField(
                 controller: titleController,
-                //initialValue: _title,
                 decoration: InputDecoration(
                   labelText: 'Title',
                   border: OutlineInputBorder(
@@ -89,13 +88,11 @@ class _CreateSongPageState extends State<CreateSongPage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Please enter a title' : null,
-                //onSaved: (value) => setState(() => _title = value!),
               ),
               const SizedBox(
                   height: 10.0), // Add some spacing between text fields
               TextFormField(
                 controller: typeController,
-                //initialValue: _type,
                 decoration: InputDecoration(
                   labelText: 'Type',
                   border: OutlineInputBorder(
@@ -104,12 +101,10 @@ class _CreateSongPageState extends State<CreateSongPage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Please enter a type' : null,
-                //onSaved: (value) => setState(() => _type = value!),
               ),
               const SizedBox(height: 10.0),
               TextFormField(
                 controller: priceController,
-                //initialValue: _price,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Price',
@@ -121,7 +116,6 @@ class _CreateSongPageState extends State<CreateSongPage> {
                     value!.isEmpty || double.tryParse(value) == null
                         ? 'Please enter a valid price'
                         : null,
-                //onSaved: (value) => setState(() => _price = value!),
               ),
               const SizedBox(height: 10.0),
               DropdownButtonFormField<int>(
@@ -144,7 +138,6 @@ class _CreateSongPageState extends State<CreateSongPage> {
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    // createSong(_title, _type, _price, _artistId);
                     createSong(
                         titleController.text.toString(),
                         typeController.text.toString(),

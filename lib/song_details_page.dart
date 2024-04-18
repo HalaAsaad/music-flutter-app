@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:music/artist_details.dart';
-
 import 'artists.dart';
 import 'song.dart';
 
 class SongDetailsPage extends StatelessWidget {
   final Song song;
-
   const SongDetailsPage({super.key, required this.song});
 
   @override

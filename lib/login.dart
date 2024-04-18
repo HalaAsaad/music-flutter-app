@@ -1,10 +1,5 @@
-// import 'dart:html';
-
 import 'package:flutter/material.dart';
-//import 'package:musicapp/services/auth.dart';
 import 'package:http/http.dart' as http;
-// import 'dart:convert';
-
 import 'package:http/http.dart';
 
 class CustomTextStyleLogin {
@@ -41,26 +36,18 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  // send request to Login.php api
   void login(String username, String password) async {
-    // Navigator.of(context).pushNamed("home"); // to delete when request success
     Response response = await http.post(
         Uri.parse('https://amphibological-doze.000webhostapp.com/Login.php'),
         body: {'userName': username, 'userPassword': password});
 
     if (response.statusCode == 200) {
-      // Handle successful login (e.g., navigate to another page)
-      // ignore: use_build_context_synchronously
+      // if success redirect to home page
       Navigator.of(context).pushNamed("home");
-      // ignore: avoid_print
       print('Login successful!');
     } else {
-      // Handle login failure (e.g., show error message)
-      // ignore: avoid_print
-      print('Login failed: ${response.statusCode}');
-      // ignore: avoid_print
       print('Login failed: ${response.body}');
-
-      // Show an appropriate error message to the user
     }
   }
 
@@ -89,7 +76,6 @@ class _LoginPageState extends State<LoginPage> {
                   }
                   return null;
                 },
-                // onSaved: (value) => setState(() => _username = value!),
               ),
               // Password field
               TextFormField(
@@ -104,7 +90,6 @@ class _LoginPageState extends State<LoginPage> {
                   }
                   return null;
                 },
-                // onSaved: (value) => setState(() => _password = value!),
               ),
               const SizedBox(height: 15.0),
               // Login button
@@ -129,6 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(height: 15.0),
+              // Register button
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed("signup");

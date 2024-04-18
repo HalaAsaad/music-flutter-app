@@ -1,7 +1,5 @@
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-// import 'dart:convert';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -72,7 +70,6 @@ class _RegisterPageState extends State<RegisterPage> {
               // Username field
               TextFormField(
                 controller: usernameController,
-                // initialValue: _username,
                 decoration: InputDecoration(
                   labelText: 'Username',
                   border: OutlineInputBorder(
@@ -85,14 +82,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   }
                   return null; // Return null for valid input
                 },
-                // onSaved: (value) => setState(() => _username = value!),
               ),
-
               const SizedBox(height: 20.0), // Add spacing
               // FName field
               TextFormField(
                 controller: firstNameController,
-                //initialValue: _fname,
                 decoration: InputDecoration(
                   labelText: 'Firstname',
                   border: OutlineInputBorder(
@@ -105,14 +99,12 @@ class _RegisterPageState extends State<RegisterPage> {
                   }
                   return null; // Return null for valid input
                 },
-                // onSaved: (value) => setState(() => _fname = value!),
               ),
 
               const SizedBox(height: 20.0), // Add spacing
               // LName field
               TextFormField(
                 controller: lastNameController,
-                //initialValue: _lname,
                 decoration: InputDecoration(
                   labelText: 'Lastname',
                   border: OutlineInputBorder(
@@ -125,14 +117,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   }
                   return null; // Return null for valid input
                 },
-                //onSaved: (value) => setState(() => _lname = value!),
               ),
-
               const SizedBox(height: 20.0), // Add spacing
               // Address field
               TextFormField(
                 controller: addressController,
-                //initialValue: _address,
                 decoration: InputDecoration(
                   labelText: 'Address',
                   border: OutlineInputBorder(
@@ -145,14 +134,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   }
                   return null; // Return null for valid input
                 },
-                //onSaved: (value) => setState(() => _address = value!),
               ),
-
               const SizedBox(height: 20.0), // Add spacing
               // Email field
               TextFormField(
                 controller: emailController,
-                // initialValue: _email,
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(
@@ -168,15 +154,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   }
                   return null; // Return null for valid input
                 },
-                // onSaved: (value) => setState(() => _email = value!),
               ),
-
               const SizedBox(height: 20.0), // Add spacing
-
               // Password field
               TextFormField(
                 controller: passwordController,
-                // initialValue: _password,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   border: OutlineInputBorder(
@@ -197,11 +179,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   }
                   return null; // Return null for valid input (consider complexity rules)
                 },
-                // onSaved: (value) => setState(() => _password = value!),
               ),
-
               const SizedBox(height: 20.0), // Add spacing
-
               // Register button
               ElevatedButton(
                 onPressed: () async {
@@ -214,8 +193,6 @@ class _RegisterPageState extends State<RegisterPage> {
                         lastNameController.text.toString(),
                         emailController.text.toString(),
                         addressController.text.toString());
-                    // register(
-                    //     _username, _password, _fname, _lname, _email, _address);
                   }
                 },
                 style: ElevatedButton.styleFrom(

@@ -43,15 +43,9 @@ class _BuySongPageState extends State<BuySongPage> {
     );
 
     if (response.statusCode == 200) {
-      // Handle successful login (e.g., navigate to another page)
       showSuccessDialog(context);
       creditCardController.clear();
-      // print('Create Song successful!');
-    } else {
-      // Handle login failure (e.g., show error message)
-      // print('Create Song failed: ${response.statusCode}');
-      // Show an appropriate error message to the user
-    }
+    } else {}
   }
 
   @override
@@ -67,29 +61,6 @@ class _BuySongPageState extends State<BuySongPage> {
           key: _formKey,
           child: Column(
             children: [
-              // DropdownButtonFormField(
-              //   value: songsNames[_selectedArtistIndex].id,
-              //   items: songsNames.map((artist) => DropdownMenuItem(
-              //         value: artist.id,
-              //         child:
-              //             Text(artist.title), // Use artist.fullName for display
-              //       )).toList(),
-              //   onChanged: (value) {
-              //     setState(() {
-              //       // _selectedArtistIndex = songsNames.indexOf(value as String);
-              //       _selectedArtistIndex =
-              //           songsNames.indexWhere((element) => element.id == value);
-              //       // Access the selected artist using artistNames[_selectedArtistIndex]
-              //       // if needed
-              //     });
-              //   },
-              //   decoration: InputDecoration(
-              //     labelText: 'Song',
-              //     border: OutlineInputBorder(
-              //       borderRadius: BorderRadius.circular(10.0),
-              //     ),
-              //   ),
-              // ),
               DropdownButtonFormField<int>(
                 value: _songId, // Holds the currently selected user ID
                 hint: const Text('Select Song'),
@@ -151,7 +122,6 @@ class _BuySongPageState extends State<BuySongPage> {
     );
   }
 }
-
 
 void showSuccessDialog(BuildContext context) {
   showDialog(

@@ -3,7 +3,7 @@ import 'package:music/all_artists.dart';
 import 'package:music/create_artist.dart';
 import 'package:music/homepage.dart';
 import 'package:music/login.dart';
-import 'package:music/pagesong.dart';
+import 'package:music/all_songs.dart';
 import 'package:music/register.dart';
 import 'package:music/create_song.dart';
 import 'package:music/buy_song.dart';
@@ -17,7 +17,6 @@ void main() async {
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
-
   @override
   State<MyApp> createState() => _MyAppState();
 }

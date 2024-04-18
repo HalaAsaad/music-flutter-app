@@ -50,9 +50,7 @@ class _CreateArtistPageState extends State<CreateArtistPage> {
       genderController.clear();
       countryController.clear();
     } else {
-      
       showErrorDialog(context);
-      
     }
   }
 
@@ -81,7 +79,6 @@ class _CreateArtistPageState extends State<CreateArtistPage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Please enter a FirstName' : null,
-                //onSaved: (value) => setState(() => _fname = value!),
               ),
               const SizedBox(
                   height: 10.0), // Add some spacing between text fields
@@ -95,11 +92,9 @@ class _CreateArtistPageState extends State<CreateArtistPage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Please enter a LastName' : null,
-                // onSaved: (value) => setState(() => _lname = value!),
               ),
               const SizedBox(height: 10.0),
               TextFormField(
-                //  keyboardType: TextInputType.number,
                 controller: genderController,
                 decoration: InputDecoration(
                   labelText: 'Gender',
@@ -109,7 +104,6 @@ class _CreateArtistPageState extends State<CreateArtistPage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Please enter a valid Gender' : null,
-                // onSaved: (value) => setState(() => _gender = value!),
               ),
               const SizedBox(height: 10.0),
               TextFormField(
@@ -123,7 +117,6 @@ class _CreateArtistPageState extends State<CreateArtistPage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Please enter a valid Country' : null,
-                // onSaved: (value) => setState(() => _country = value!),
               ),
               const SizedBox(height: 10.0), // Add spacing before the button
               ElevatedButton(
@@ -135,8 +128,6 @@ class _CreateArtistPageState extends State<CreateArtistPage> {
                         lastNameController.text.toString(),
                         genderController.text.toString(),
                         countryController.text.toString());
-                    // createArtist(_fname, _lname, _gender,
-                    //     _country); // Call login function
                   }
                 },
                 style: ElevatedButton.styleFrom(

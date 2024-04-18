@@ -3,8 +3,6 @@ import 'package:music/artist_songs_page.dart';
 import 'artists.dart';
 import 'song.dart';
 
-// import 'song.dart';
-
 class SearchArtistPage extends StatefulWidget {
   const SearchArtistPage({super.key});
 
@@ -15,8 +13,8 @@ class SearchArtistPage extends StatefulWidget {
 
 class _SearchArtistPageState extends State<SearchArtistPage> {
   String _searchText = '';
-  List<Artist> _AllArtists = []; //allArtists;
-  List<Artist> _filteredArtists = []; //allArtists;
+  List<Artist> _AllArtists = [];
+  List<Artist> _filteredArtists = [];
 
   @override
   void initState() {
@@ -47,7 +45,6 @@ class _SearchArtistPageState extends State<SearchArtistPage> {
               onChanged: (text) {
                 _searchText = text.toLowerCase();
                 _filteredArtists = _AllArtists.where((artist) =>
-                        // artist.firstName.toLowerCase().contains(_searchText))
                         artist.firstName.toLowerCase().contains(_searchText) ||
                         artist.lastName.toLowerCase().contains(_searchText))
                     .toList();
@@ -82,8 +79,6 @@ class _SearchArtistPageState extends State<SearchArtistPage> {
                         ),
                       );
                     }
-                    // myList.contains(null)
-                    // if (!checknull) {
                     if (!artistSongs.contains(null)) {
                       Navigator.push(
                         context,
